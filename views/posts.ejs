@@ -1,0 +1,17 @@
+<%- include('partials/postheader'); -%> 
+    <div class="container-fluid">
+        <div class="head">
+          <h1 class="heading">Posts</h1>
+        <% posts.forEach(function(post){ %>
+
+        <div class="post">
+                <% var id = post.id; %>
+                <h1 class="title"><%= post.title %></h1>
+                <h3 class="author"><%= post.author %></h3>
+                <img src="<%= post.img %>">
+                <p style="padding: 5px 20px -5px 20px"><%= post.body %></p>
+        </div>
+        <% }); %>
+  
+
+<%- include('partials/postfooter'); -%> 

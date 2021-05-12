@@ -1,0 +1,27 @@
+<%- include('partials/composeheader'); -%> 
+
+<form action="/compose" method="POST">
+    <div class="form-group">
+      <label class="font" for="email">Title:</label>
+      <input type="email" class="form-control" id="email" placeholder="Blog Title" name="email">
+    </div>
+    <div class="form-group">
+      <label class="font" for="pwd">Author:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Author" name="pwd">
+    </div>
+    <div class="form-group">
+    <label class="font" for="pwd">Image:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter the image URL" name="pwd">
+    </div>
+    <div class="form-group">
+    <label class="font" for="pwd" class="post">Post:</label>
+    <br>
+    <textarea placeholder="Type your post..."></textarea>
+    </div>
+   
+    
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+
+<%- include('partials/composefooter'); -%> 
