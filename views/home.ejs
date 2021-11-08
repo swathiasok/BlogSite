@@ -1,0 +1,41 @@
+<%- include('partials/homeheader'); -%> 
+
+<div class="container-fluid" style="margin-top: 50px;">
+    <div class="row">
+      <div class="left-column col-lg-8">
+        <div class="row">
+          <h2 class="post-name" >Recent Posts</h2>
+          <% for(var i=0; i<4; i++){ %>
+            <div class="lPost col-md-12">
+              <p class="name"><%= posts[i].title %></p>
+              <p class="author">-<%= posts[i].author %></p>
+              <img src="<%= posts[i].img %>" class="imagePost" >
+              <p class="body"><%=posts[i].body.substring(0, 500) + " ... "%><br><a href="/posts/<%=posts[i]._id%>">Read More</a></p>
+            </div>
+          <% } %> 
+        </div>
+      </div>
+      
+      <div class="right-column col-lg-3">
+        <h2 class="pop-name" >Popular Posts</h2>
+          <div class="container">
+            <img src="https://lh3.googleusercontent.com/GmxknXCBfaWiABmSVox2GRwBg6egB_NLbAE6s8pFYrXgVxOlyHj9SPBgL_STQ_uDWnKHdtGIKBnXaSadvVkkJejfz2I=w800?s=300" class="imagePop"  alt="popular"/>
+              <div class="overlay">Summer Vibes</div>
+          </div>
+          <br><br><br><br>
+          <div class="container">
+            <img src="https://cdn.justluxe.com/articles/images/news/15626053419258.jpg" class="imagePop" alt="popular"/>
+              <div class="overlay">Vintage</div>
+          </div>
+          <br><br><br><br>
+          <div class="container">
+            <img src="https://images.squarespace-cdn.com/content/v1/5717eb762b8dde43af02834e/1569313891236-A8GBLBWR9S90AKP1PNUP/ke17ZwdGBToddI8pDm48kHeN-3lxkr-kEOtcijtVINxZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIxDFKE9MjhJF9s9qm2nDZwoBKmsCv7em8klEJdRbhj_EKMshLAGzx4R3EDFOm1kBS/Paris+-+France" class="imagePop" alt="popular"/>
+              <div class="overlay">All about Swag</div>
+          </div>
+      </div>
+    </div>
+</div>
+
+<%- include('partials/homefooter'); -%> 
+         
+  
