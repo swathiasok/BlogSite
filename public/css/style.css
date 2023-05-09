@@ -1,0 +1,304 @@
+/* STYLING HOME PAGE */
+/* Styling NavBar */
+.navbar {
+    background-color: #cad59e;
+    border-radius: 0%;
+    padding: 5px 30px;
+}
+
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+.nav-item {
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    padding: 0px 15px;
+}
+
+/* Styling top page section */
+.left-column {
+    padding: 5%;
+    padding-top: 2%;
+}
+
+.home-img-1 {
+    height: 650px;
+    width: auto;
+    float: left;
+    padding: 1%;
+    padding-bottom: 5%;
+}
+
+.home-img-2 {
+    height: 300px;
+    width: 500px;
+    float: left;
+    padding: 1%;
+}
+
+.home-img-3 {
+    height: 350px;
+    width: 500px;
+    float: left;
+    padding: 1%;
+    padding-bottom: 5%;
+}
+
+.food-quote {
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+    color: #a4b26f;
+}
+
+/* Styling Categories section */
+.right-column {
+    padding: 2% 1%;
+    margin: 5px 0;
+    color: #a4b26f;
+    border-left: 1px solid #e6e8db;
+}
+
+.category {
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.imagePop {
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    padding: 5%;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.category-post {
+    padding: 5%;
+}
+
+.category-text {
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+}
+
+/* Styling Carousel */
+.container-fluid {
+    padding: 0;
+}
+
+.carousel-inner {
+    background-color: #cad59e;
+    padding-top: 2%;
+}
+
+.carousel-title {
+    font-size: 30px;
+    text-align: center;
+    color: #fcffe8;
+    font-family: 'Kalam', cursive;
+}
+
+.carousel-item {
+    padding: 2% 0 12% 0;
+    margin: 0;
+    color: #EDF1D6;
+}
+
+.carousel-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.carousel-caption {
+    padding: 0 5% 1% 5%;
+    color: #fcffe8;
+}
+
+.carousel-caption-name {
+    font-family: 'Amatic SC', cursive;
+}
+
+.carousel-caption-body {
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+}
+
+/* Styling Recent Posts section */
+.bottom-section {
+    padding-bottom: 0;
+}
+
+.wine-icon {
+    padding: 0 1%;
+}
+
+.arrow-icon {
+    padding: 5px 0;
+}
+
+.lPost {
+    display: flex;
+}
+
+.img-div {
+    width: 20%;
+}
+
+.post-div {
+    padding: 5% 2% 2% 5%;
+}
+
+.recent-post-column {
+    padding: 2% 5%;
+    margin: 5px 0;
+}
+
+.recent-posts {
+    color: #9faa77;
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.post-name {
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    color: #42553c;
+}
+
+.post-body {
+    font-family: 'Comme', sans-serif;
+    font-size: 14px;
+    padding: 1% 0 0 5%;
+    color: #414f3d;
+}
+
+.post-author {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0 5%;
+    font-size: 15px;
+    color: #404f3b;
+}
+
+.post-img {
+    height: 250px;
+    width: 250px;
+    padding: 10% 10%;
+}
+
+/* Styling footer section */
+.btn {
+    background-color: #8c966a;
+    margin: 0 auto 5% auto;
+    display: block;
+    color: #fcffe8;
+    font-family: 'Karla', sans-serif;
+}
+
+.footer-section {
+    border-top: #879164 solid 1px;
+    text-align: center;
+    padding: 1%;
+    margin: 1%;
+    color: #879164;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin-top: -3%;
+}
+
+
+/* STYLING COMPOSE PAGE */
+.compose-body {
+    background: url(/public/images/compose.avif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.compose-section {
+    padding: 5%;
+}
+
+.compose-header {
+    color: #9faa77;
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.compose-form {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    padding: 1% 0 0 5%;
+    color: #61745b;
+}
+
+.compose-ph {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 1%;
+    font-size: 15px;
+    width: 50%;
+}
+
+textarea {
+    height: 200px;
+}
+
+.compose-btn {
+    margin: 3% 5% 3% 25%;
+}
+
+/* STYLING POST PAGE */
+.full-post{
+    padding: 5%;
+}
+
+.full-post-title{
+    color: #9faa77;
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+.full-post-author{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0 5%;
+    font-size: 15px;
+    color: #9faa77;
+}
+
+.full-post-body{
+    text-align: justify;
+    padding: 2%;
+    color: #656e46;
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+}
+
+.full-post-img{
+    height: 400px;
+    padding: 3%;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

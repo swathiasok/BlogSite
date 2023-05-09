@@ -1,19 +1,10 @@
 <%- include('partials/postheader'); -%> 
-<script>
-    $(document).ready(function(){
-        $("i").click(function(){
-            $("p").toggle();
-            $("img").toggle();
-            $(".post").toggleClass("height");
-        });   
-    });
 
-</script>
-<div class="post">
-    <h1 class="title"><%= title %></h1>
-    <i class="fas fa-chevron-circle-down  icon" onclick="myFunction()" id="myBtn"></i>
-    <h3 class="author"><%= author %></h3>
-    <img src="<%= img %>" style="display: none;">
-    <p class="content" style="padding: 5px 20px -5px 20px; display:none"><%= body %></p>
+<div class="full-post">
+    <h1 class="full-post-title title"> <%= title %> </h1>
+    <h3 class="full-post-author author"><b><i> - <%= author %> </i></b></h3>
+    <img class="full-post-img" src=" <%= img %> "/>
+    <p class="full-post-body content"> <%= body %> </p>
 </div>
-<%- include('partials/postfooter'); -%> 
+
+<%- include('partials/footer'); -%> 

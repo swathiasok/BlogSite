@@ -1,41 +1,147 @@
-<%- include('partials/homeheader'); -%> 
+<%- include('partials/homeheader'); -%>
 
-<div class="container-fluid" style="margin-top: 50px;">
-    <div class="row">
-      <div class="left-column col-lg-8">
-        <div class="row">
-          <h2 class="post-name" >Recent Posts</h2>
-          <% for(var i=0; i<4; i++){ %>
-            <div class="lPost col-md-12">
-              <p class="name"><%= posts[i].title %></p>
-              <p class="author">-<%= posts[i].author %></p>
-              <img src="<%= posts[i].img %>" class="imagePost" >
-              <p class="body"><%=posts[i].body.substring(0, 500) + " ... "%><br><a href="/posts/<%=posts[i]._id%>">Read More</a></p>
-            </div>
-          <% } %> 
-        </div>
+<div class="first-section container-fluid">
+  <div class="row">
+    <div class="left-column col-lg-9">
+      <p class="food-quote" style="font-size: 30px;">
+        “Nothing brings people together like good food"
+      </p>
+      <img class="home-img-1" src="/public/images/home-img-1.avif" />
+      <img class="home-img-2" src="/public/images/home-img-2.jpg" />
+      <img class="home-img-3" src="/public/images/home-img-3.jpg" />
+      <p class="food-quote">
+        “Food brings people together on many different levels. It’s nourishment of the soul and body; it’s truly love.”
+        <br>– Giada De Laurentiis
+      </p>
+    </div>
+
+    <!-- Display categories in the blog -->
+
+    <div class="right-column col-lg-3">
+      <h2 class="category pop-name">Categories</h2>
+      <div class="category-post container">
+        <img src="/public/images/salad.jpg" class="imagePop" alt="popular" />
+        <div class="category-text overlay">Healthy</div>
       </div>
-      
-      <div class="right-column col-lg-3">
-        <h2 class="pop-name" >Popular Posts</h2>
-          <div class="container">
-            <img src="https://lh3.googleusercontent.com/GmxknXCBfaWiABmSVox2GRwBg6egB_NLbAE6s8pFYrXgVxOlyHj9SPBgL_STQ_uDWnKHdtGIKBnXaSadvVkkJejfz2I=w800?s=300" class="imagePop"  alt="popular"/>
-              <div class="overlay">Summer Vibes</div>
-          </div>
-          <br><br><br><br>
-          <div class="container">
-            <img src="https://cdn.justluxe.com/articles/images/news/15626053419258.jpg" class="imagePop" alt="popular"/>
-              <div class="overlay">Vintage</div>
-          </div>
-          <br><br><br><br>
-          <div class="container">
-            <img src="https://images.squarespace-cdn.com/content/v1/5717eb762b8dde43af02834e/1569313891236-A8GBLBWR9S90AKP1PNUP/ke17ZwdGBToddI8pDm48kHeN-3lxkr-kEOtcijtVINxZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIxDFKE9MjhJF9s9qm2nDZwoBKmsCv7em8klEJdRbhj_EKMshLAGzx4R3EDFOm1kBS/Paris+-+France" class="imagePop" alt="popular"/>
-              <div class="overlay">All about Swag</div>
-          </div>
+      <hr>
+      <div class="container">
+        <img src="/public/images/fried-rice.jpeg" class="imagePop" alt="popular" />
+        <div class="category-text overlay">Asian</div>
+      </div>
+      <hr>
+      <div class="container">
+        <img src="/public/images/macaroon.jpeg" class="imagePop" alt="popular" />
+        <div class="category-text overlay">Desserts</div>
       </div>
     </div>
+  </div>
 </div>
 
-<%- include('partials/homefooter'); -%> 
-         
-  
+<!-- Creating a carousel to display images and facts -->
+<div class="container-fluid">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Creating slide indicators at the bottom -->
+    <div class="carousel-indicators" style="color: #EDF1D6;">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+
+    <!-- Creating carousel contents -->
+    <div class="carousel-inner">
+      <h2 class="carousel-title"> FACT CHECK </h2>
+      <div class="carousel-item active">
+        <img src="/public/images/fruit-platter.jpeg" class="carousel-img d-block" alt="First Image" />
+        <div class="carousel-caption d-md-block bg=white">
+          <h2 class="carousel-caption-name"> Fruit Platter </h2>
+          <p class="carousel-caption-body"> Did you know that eating an apple is a more reliable method of staying awake
+            than consuming a cup of coffee since the natural sugar in an apple is more potent than the caffeine in
+            coffee? </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/public/images/salad.jpg" class="carousel-img d-block" alt="second Image" />
+        <div class="carousel-caption d-none d-md-block bg=white">
+          <h2 class="carousel-caption-name"> Salad </h2>
+          <p class="carousel-caption-body"> Did you know that the Caesar salad was once voted by the International
+            Society of Epicures in Paris as the “greatest recipe to originate from the Americas in fifty years.”? </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/public/images/macaroon.jpeg" class="carousel-img d-block" alt="Third Image" />
+        <div class="carousel-caption d-none d-md-block bg=white">
+          <h2 class="carousel-caption-name">Macaroons </h2>
+          <p class="carousel-caption-body"> Did you know that in New York City, March 20 is celebrated as Macaron Day?
+            To celebrate the French treat, participating bakeries in New York City offer free macarons to customers.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/public/images/fried-rice.jpeg" class="carousel-img d-block" alt="Fourth Image" />
+        <div class="carousel-caption d-none d-md-block bg=white">
+          <h2 class="carousel-caption-name"> Kimchi Fried Rice </h2>
+          <p class="carousel-caption-body"> Did you know that in 2015, UNESCO declared the kimchi and its traditional
+            practices as Korea’s intangible cultural heritage? </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/public/images/waffles.jpg" class="carousel-img d-block" alt="Fifth Image" />
+        <div class="carousel-caption d-none d-md-block bg=white">
+          <h2 class="carousel-caption-name"> Waffles </h2>
+          <p class="carousel-caption-body"> Did you know that Nike's first pair of sneakers, Waffle Trainers, were made
+            using a real waffle iron after Bill Bowerman was inspired by honeycomb shape of the waffle iron his wife was
+            using to make waffle?. </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Creating carousel arrows to move back and forth -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true" style="color: #EDF1D6;"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+<!-- Display recent posts in the blog -->
+
+<div class="recent-post-column col-lg-12">
+  <div class="row bottom-section">
+    <h2 class="recent-posts">Recent Posts</h2>
+    <% posts.forEach(function(post){ %>
+    <div class="lPost col-md-12">
+      <div class="img-div">
+        <img src="<%= post.image_url %>" class="post-img">
+      </div>
+      <div class="post-div">
+        <p class="post-name">
+          <i class="wine-icon fa-solid fa-wine-bottle" style="color: #9faa77;"></i>
+          <%= post.title %> </p>
+        <p class="post-author"> <i> - <%= post.author %> </i></p>
+        <p class="post-body"> <%= post.body.substring(0, 500) + "..." %>
+          <a href="posts/<%= post._id%>"><i class="arrow-icon fa-solid fa-arrow-right"
+              style="color: #9faa77;float: right;"></i></a>
+        </p>
+        <hr>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+
+<!-- Button to redirect to "All Posts" page -->
+<form action="/" method="POST">
+  <button class="btn" type="submit">All posts</button>
+</form>
+
+  <%- include('partials/footer'); -%>

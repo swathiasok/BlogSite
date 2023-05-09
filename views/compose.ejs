@@ -1,27 +1,30 @@
-<%- include('partials/composeheader'); -%> 
+<%- include('partials/composeheader'); -%>
 
-<form action="/compose" method="POST">
-    <div class="form-group">
-      <label class="font" for="email">Title:</label>
-      <input type="email" class="form-control" id="email" placeholder="Blog Title" name="email">
+<!-- Compose page to write new blog posts -->
+<div class="compose-section container">
+  <h2 class="compose-header">Compose your new Blog post</h2>
+  <form action="/compose" method="POST">
+    <div class="compose-form form-group">
+      <label class="font" for="title">Title:</label>
+      <input type="text" class="compose-ph form-control" id="title" placeholder="Title of the blog post" name="title">
     </div>
-    <div class="form-group">
-      <label class="font" for="pwd">Author:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Author" name="pwd">
+    <div class="compose-form form-group">
+      <label class="font" for="author">Author:</label>
+      <input type="text" class="compose-ph form-control" id="author" placeholder="Author of the blog post"
+        name="author">
     </div>
-    <div class="form-group">
-    <label class="font" for="pwd">Image:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter the image URL" name="pwd">
+    <div class="compose-form form-group">
+      <label class="font" for="image">Image:</label>
+      <input type="text" class="compose-ph form-control" id="image" placeholder="Image URL for the blog post (weblink)"
+        name="image">
     </div>
-    <div class="form-group">
-    <label class="font" for="pwd" class="post">Post:</label>
-    <br>
-    <textarea placeholder="Type your post..."></textarea>
+    <div class="compose-form form-group">
+      <label class="font" for="body" class="post">Post:</label>
+      <br>
+      <textarea name="post" class="compose-ph form-control" placeholder="Type your post..."></textarea>
     </div>
-   
-    
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="compose-btn btn btn-default">Submit</button>
   </form>
+</div>
 
-
-<%- include('partials/composefooter'); -%> 
+<%- include('partials/footer'); -%>

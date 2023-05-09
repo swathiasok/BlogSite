@@ -1,17 +1,28 @@
-<%- include('partials/postheader'); -%> 
-    <div class="container-fluid">
-        <div class="head">
-          <h1 class="heading">Posts</h1>
-        <% posts.forEach(function(post){ %>
+<%- include('partials/postheader'); -%>
 
-        <div class="post">
-                <% var id = post.id; %>
-                <h1 class="title"><%= post.title %></h1>
-                <h3 class="author"><%= post.author %></h3>
-                <img src="<%= post.img %>">
-                <p style="padding: 5px 20px -5px 20px"><%= post.body %></p>
+<!-- Display all the posts in the blog page -->
+<div class="recent-post-column col-lg-12">
+        <div class="row bottom-section">
+          <h2 class="recent-posts">All Posts</h2>
+          <% posts.forEach(function(post){ %>
+          <div class="lPost col-md-12">
+            <div class="img-div">
+              <img src="<%= post.image_url %>" class="post-img">
+            </div>
+            <div class="post-div">
+              <p class="post-name">
+                <i class="wine-icon fa-solid fa-wine-bottle" style="color: #9faa77;"></i>
+                <%= post.title %> </p>
+              <p class="post-author"> <i> - <%= post.author %> </i></p>
+              <p class="post-body"> <%= post.body.substring(0, 500) + "..." %>
+                <a href="posts/<%= post._id%>"><i class="arrow-icon fa-solid fa-arrow-right"
+                    style="color: #9faa77;float: right;"></i></a>
+              </p>
+              <hr>
+            </div>
+          </div>
+          <% }) %>
         </div>
-        <% }); %>
-  
-
-<%- include('partials/postfooter'); -%> 
+</div>
+         
+<%- include('partials/footer'); -%>
