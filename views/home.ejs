@@ -119,10 +119,11 @@
     <h2 class="recent-posts">Recent Posts</h2>
     <% posts.forEach(function(post){ %>
     <div class="lPost col-md-12">
-      <div class="img-div">
+      <div class="row">
+      <div class="img-div col-md-3">
         <img src="<%= post.image_url %>" class="post-img">
       </div>
-      <div class="post-div">
+      <div class="post-div col-md-9">
         <p class="post-name">
           <i class="wine-icon fa-solid fa-wine-bottle" style="color: #9faa77;"></i>
           <%= post.title %> </p>
@@ -133,6 +134,7 @@
         </p>
         <hr>
       </div>
+    </div>
     </div>
     <% }) %>
   </div>
